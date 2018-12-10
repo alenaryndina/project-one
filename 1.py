@@ -1,7 +1,8 @@
 import sys
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QInputDialog
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QInputDialog, QMessageBox
 from PyQt5.QtGui import QPixmap
+
 
 class MyWidget(QMainWindow):
 
@@ -48,12 +49,23 @@ class MyWidget(QMainWindow):
         time = self.timeEdit.time().toString()
         if date == "2018-12-11" and time == "06:00:00":
             self.point += 100
-        self.pushButton.setText(str(self.point))
-        if 0< self.point <=50:
-            i, ok =Q
+        result = ""
+        if 0 <= self.point <= 50:
+            result = 'Вы набрали ' + str(self.point) + " баллов (оценка - 1)"
+        if 50 < self.point <= 90:
+            result = 'Вы набрали ' + str(self.point) + " баллов (оценка -2 )"
+        if 90 < self.point <= 100:
+            result = 'Вы набрали ' + str(self.point) + " баллов (оценка -3 )"
+        if 100 < self.point <= 140:
+            result = 'Вы набрали ' + str(self.point) + " баллов (оценка -4 )"
+        if 140 < self.point <= 200:
+            result = 'Вы набрали ' + str(self.point) + " баллов (оценка -5 )"
+        print(result)
 
-        self.point = 0
-
+        buttonReply = QMessageBox.question(self, 'Результат теста', result,
+                                           QMessageBox.Yes)
+        if buttonReply == QMessageBox.Yes:
+            self.point = 0
 
 
 app = QApplication(sys.argv)
