@@ -1,8 +1,7 @@
 import sys
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QInputDialog
 from PyQt5.QtGui import QPixmap
-
 
 class MyWidget(QMainWindow):
 
@@ -16,9 +15,9 @@ class MyWidget(QMainWindow):
         self.setWindowTitle('PyQT')
         self.pixmap = QPixmap("1.jpg")
         self.label.setPixmap(self.pixmap)
-        self.show()
         self.pushButton.clicked.connect(self.run)
         self.point = 0
+        self.show()
 
     def run(self):
         if self.radioButton_8.isChecked():
@@ -29,10 +28,32 @@ class MyWidget(QMainWindow):
             self.point += 10
         if self.radioButton_3.isChecked():
             self.point += 10
-        if self.lineEdit.text().lowers == "Аравийский полуостров".lower():
+        if self.lineEdit.text().lower == "Аравийский полуостров".lower():
             self.point += 10
+        if self.radioButton_9.isChecked():
+            self.point += 10
+        if self.checkBox_13.isChecked() and not (self.checkBox_14.isChecked() or self.checkBox_16.isChecked()):
+            self.point += 10
+        if self.checkBox_15.isChecked() and not (self.checkBox_14.isChecked() or self.checkBox_16.isChecked()):
+            self.point += 10
+        if self.radioButton_16.isChecked():
+            self.point += 10
+        if self.radioButton_25.isChecked():
+            self.point += 10
+        if self.lineEdit_2.text().lower == "Енисей".lower():
+            self.point += 10
+        if self.radioButton_27.isChecked():
+            self.point += 10
+        date = self.calendarWidget.selectedDate().toString("yyyy-MM-dd")
+        time = self.timeEdit.time().toString()
+        if date == "2018-12-11" and time == "06:00:00":
+            self.point += 100
         self.pushButton.setText(str(self.point))
+        if 0< self.point <=50:
+            i, ok =Q
+
         self.point = 0
+
 
 
 app = QApplication(sys.argv)
