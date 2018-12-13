@@ -186,7 +186,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_3">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>310</x>
       <y>140</y>
       <width>82</width>
       <height>17</height>
@@ -202,7 +202,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_4">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>520</x>
       <y>140</y>
       <width>121</width>
       <height>17</height>
@@ -231,8 +231,8 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>660</x>
-      <y>700</y>
+      <x>520</x>
+      <y>680</y>
       <width>71</width>
       <height>91</height>
      </rect>
@@ -260,7 +260,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_6">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>160</x>
       <y>60</y>
       <width>82</width>
       <height>17</height>
@@ -545,7 +545,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_14">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>180</x>
       <y>540</y>
       <width>82</width>
       <height>17</height>
@@ -577,7 +577,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_16">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>370</x>
       <y>540</y>
       <width>82</width>
       <height>17</height>
@@ -635,11 +635,14 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>Тихий</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_5</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radioButton_23">
     <property name="geometry">
      <rect>
-      <x>140</x>
+      <x>180</x>
       <y>580</y>
       <width>82</width>
       <height>17</height>
@@ -655,7 +658,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QRadioButton" name="radioButton_24">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>580</y>
       <width>82</width>
       <height>17</height>
@@ -713,6 +716,9 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>Атлантический</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_5</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radioButton_27">
     <property name="geometry">
@@ -726,6 +732,9 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>Индийский</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_5</string>
+    </attribute>
    </widget>
    <widget class="QRadioButton" name="radioButton_28">
     <property name="geometry">
@@ -739,6 +748,9 @@ p, li { white-space: pre-wrap; }
     <property name="text">
      <string>Северный Ледовитый</string>
     </property>
+    <attribute name="buttonGroup">
+     <string notr="true">buttonGroup_5</string>
+    </attribute>
    </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
@@ -808,6 +820,19 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;чтобы оказаться там 10 октября в 9 часов утра (время в пути 1 час) ?&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>680</y>
+      <width>141</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сохранить результаты</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -824,10 +849,10 @@ p, li { white-space: pre-wrap; }
  <resources/>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
-  <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup_3"/>
+  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_4"/>
   <buttongroup name="buttonGroup_5"/>
+  <buttongroup name="buttonGroup_2"/>
  </buttongroups>
 </ui>
