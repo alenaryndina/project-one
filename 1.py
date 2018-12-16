@@ -147,6 +147,27 @@ class MyWidget(QMainWindow):
             file.write(self.radioButton_3.text()+"\n")
         if self.radioButton_4.isChecked():
             file.write(self.radioButton_4.text()+"\n")
+            
+        file.write("\n"+self.textEdit_5.toPlainText())
+        if self.radioButton.isChecked():
+            file.write(self.radioButton.text()+"\n")
+        if self.radioButton_2.isChecked():
+            file.write(self.radioButton_2.text()+"\n")
+        if self.radioButton_3.isChecked():
+            file.write(self.radioButton_3.text()+"\n")
+        if self.radioButton_4.isChecked():
+            file.write(self.radioButton_4.text()+"\n")
+            
+            
+        file.write("\n"+self.textEdit_5.toPlainText())
+        if self.radioButton.isChecked():
+            file.write(self.radioButton.text()+"\n")
+        if self.radioButton_2.isChecked():
+            file.write(self.radioButton_2.text()+"\n")
+        if self.radioButton_3.isChecked():
+            file.write(self.radioButton_3.text()+"\n")
+        if self.radioButton_4.isChecked():
+            file.write(self.radioButton_4.text()+"\n")
 
         file.close()
 
