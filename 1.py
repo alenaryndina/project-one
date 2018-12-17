@@ -22,29 +22,29 @@ class MyWidget(QMainWindow):
         self.show()
 
     def run(self):
-        if self.radioButton_8.isChecked():
+        if self.answer3.isChecked():
             self.point += 10
         if self.checkBox_9.isChecked() and not (self.checkBox_10.isChecked() or self.checkBox_11.isChecked()):
             self.point += 10
         if self.checkBox_12.isChecked() and not (self.checkBox_10.isChecked() or self.checkBox_11.isChecked()):
             self.point += 10
-        if self.radioButton_3.isChecked():
+        if self.answer6.isChecked():
             self.point += 10
         if self.lineEdit.text().lower() == "Аравийский полуостров".lower():
             self.point += 10
-        if self.radioButton_9.isChecked():
+        if self.answer8.isChecked():
             self.point += 10
         if self.checkBox_13.isChecked() and not (self.checkBox_14.isChecked() or self.checkBox_16.isChecked()):
             self.point += 10
         if self.checkBox_15.isChecked() and not (self.checkBox_14.isChecked() or self.checkBox_16.isChecked()):
             self.point += 10
-        if self.radioButton_16.isChecked():
+        if self.answer16.isChecked():
             self.point += 10
-        if self.radioButton_25.isChecked():
+        if self.answer18.isChecked():
             self.point += 10
         if self.lineEdit_2.text().lower() == "Енисей".lower():
             self.point += 10
-        if self.radioButton_27.isChecked():
+        if self.answer23.isChecked():
             self.point += 10
         date = self.calendarWidget.selectedDate().toString("yyyy-MM-dd")
         time = self.timeEdit.time().toString()
@@ -73,30 +73,30 @@ class MyWidget(QMainWindow):
             self.buttonGroup_3.setExclusive(False)
             self.buttonGroup_4.setExclusive(False)
             self.buttonGroup_5.setExclusive(False)
-            self.radioButton.setChecked(False)
-            self.radioButton_2.setChecked(False)
-            self.radioButton_3.setChecked(False)
-            self.radioButton_4.setChecked(False)
-            self.radioButton_5.setChecked(False)
-            self.radioButton_6.setChecked(False)
-            self.radioButton_7.setChecked(False)
-            self.radioButton_8.setChecked(False)
-            self.radioButton_9.setChecked(False)
-            self.radioButton_10.setChecked(False)
-            self.radioButton_11.setChecked(False)
-            self.radioButton_12.setChecked(False)
-            self.radioButton_13.setChecked(False)
-            self.radioButton_14.setChecked(False)
-            self.radioButton_15.setChecked(False)
-            self.radioButton_16.setChecked(False)
-            self.radioButton_21.setChecked(False)
-            self.radioButton_22.setChecked(False)
-            self.radioButton_23.setChecked(False)
-            self.radioButton_24.setChecked(False)
-            self.radioButton_25.setChecked(False)
-            self.radioButton_26.setChecked(False)
-            self.radioButton_27.setChecked(False)
-            self.radioButton_28.setChecked(False)
+            self.answer4.setChecked(False)
+            self.answer5.setChecked(False)
+            self.answer6.setChecked(False)
+            self.answer7.setChecked(False)
+            self.answer.setChecked(False)
+            self.answer1.setChecked(False)
+            self.answer2.setChecked(False)
+            self.answer3.setChecked(False)
+            self.answer8.setChecked(False)
+            self.answer12.setChecked(False)
+            self.answer9.setChecked(False)
+            self.answer10.setChecked(False)
+            self.answer11.setChecked(False)
+            self.answer13.setChecked(False)
+            self.answer15.setChecked(False)
+            self.answer14.setChecked(False)
+            self.answer19.setChecked(False)
+            self.answer21.setChecked(False)
+            self.answer17.setChecked(False)
+            self.answer16.setChecked(False)
+            self.answer18.setChecked(False)
+            self.answer22.setChecked(False)
+            self.answer23.setChecked(False)
+            self.answer20.setChecked(False)
 
             self.checkBox_9.setChecked(False)
             self.checkBox_10.setChecked(False)
@@ -118,14 +118,14 @@ class MyWidget(QMainWindow):
         file = open("result_test.txt","w",encoding="utf-8")
         file.write(str(self.point)+"\n")
         file.write(self.textEdit_3.toPlainText())
-        if self.radioButton_5.isChecked():
-            file.write(self.radioButton_5.text()+"\n")
-        if self.radioButton_6.isChecked():
-            file.write(self.radioButton_6.text()+"\n")
-        if self.radioButton_7.isChecked():
-            file.write(self.radioButton_7.text()+"\n")
-        if self.radioButton_8.isChecked():
-            file.write(self.radioButton_8.text()+"\n")
+        if self.answer.isChecked():
+            file.write(self.answer.text()+"\n")
+        if self.answer1.isChecked():
+            file.write(self.answer1.text()+"\n")
+        if self.answer2.isChecked():
+            file.write(self.answer2.text()+"\n")
+        if self.answer3.isChecked():
+            file.write(self.answer3.text()+"\n")
 
         file.write("\n"+self.textEdit_4.toPlainText())
         if self.checkBox_9.isChecked():
@@ -139,35 +139,77 @@ class MyWidget(QMainWindow):
 
 
         file.write("\n"+self.textEdit_5.toPlainText())
-        if self.radioButton.isChecked():
-            file.write(self.radioButton.text()+"\n")
-        if self.radioButton_2.isChecked():
-            file.write(self.radioButton_2.text()+"\n")
-        if self.radioButton_3.isChecked():
-            file.write(self.radioButton_3.text()+"\n")
-        if self.radioButton_4.isChecked():
-            file.write(self.radioButton_4.text()+"\n")
+        if self.answer4.isChecked():
+            file.write(self.answer4.text()+"\n")
+        if self.answer5.isChecked():
+            file.write(self.answer5.text()+"\n")
+        if self.answer6.isChecked():
+            file.write(self.answer6.text()+"\n")
+        if self.answer7.isChecked():
+            file.write(self.answer7.text()+"\n")
             
-        file.write("\n"+self.textEdit_5.toPlainText())
-        if self.radioButton.isChecked():
-            file.write(self.radioButton.text()+"\n")
-        if self.radioButton_2.isChecked():
-            file.write(self.radioButton_2.text()+"\n")
-        if self.radioButton_3.isChecked():
-            file.write(self.radioButton_3.text()+"\n")
-        if self.radioButton_4.isChecked():
-            file.write(self.radioButton_4.text()+"\n")
+        file.write("\n"+self.textEdit_6.toPlainText())
+        file.write(self.lineEdit.text()+"\n")
             
             
-        file.write("\n"+self.textEdit_5.toPlainText())
-        if self.radioButton.isChecked():
-            file.write(self.radioButton.text()+"\n")
-        if self.radioButton_2.isChecked():
-            file.write(self.radioButton_2.text()+"\n")
-        if self.radioButton_3.isChecked():
-            file.write(self.radioButton_3.text()+"\n")
-        if self.radioButton_4.isChecked():
-            file.write(self.radioButton_4.text()+"\n")
+        file.write("\n"+self.textEdit_8.toPlainText())
+        if self.answer8.isChecked():
+            file.write(self.answer4.text()+"\n")
+        if self.answer9.isChecked():
+            file.write(self.answer5.text()+"\n")
+        if self.answer10.isChecked():
+            file.write(self.answer6.text()+"\n")
+        if self.answer11.isChecked():
+            file.write(self.answer7.text()+"\n")
+
+
+        file.write("\n"+self.textEdit_9.toPlainText())
+        if self.checkBox_9.isChecked():
+            file.write(self.checkBox_13.text()+"\n")
+        if self.checkBox_10.isChecked():
+            file.write(self.checkBox_14.text()+"\n")
+        if self.checkBox_11.isChecked():
+            file.write(self.checkBox_15.text()+"\n")
+        if self.checkBox_12.isChecked():
+            file.write(self.checkBox_16.text()+"\n")
+
+
+        file.write("\n"+self.textEdit_11.toPlainText())
+        if self.answer12.isChecked():
+            file.write(self.answer4.text()+"\n")
+        if self.answer13.isChecked():
+            file.write(self.answer5.text()+"\n")
+        if self.answer15.isChecked():
+            file.write(self.answer6.text()+"\n")
+        if self.answer14.isChecked():
+            file.write(self.answer7.text()+"\n")
+
+        file.write("\n"+self.textEdit_12.toPlainText())
+        if self.answer17.isChecked():
+            file.write(self.answer4.text()+"\n")
+        if self.answer16.isChecked():
+            file.write(self.answer5.text()+"\n")
+        if self.answer18.isChecked():
+            file.write(self.answer6.text()+"\n")
+        if self.answer19.isChecked():
+            file.write(self.answer7.text()+"\n")
+
+        file.write("\n"+self.textEdit_10.toPlainText())
+        file.write(self.lineEdit_2.text()+"\n")
+
+
+        file.write("\n"+self.textEdit_13.toPlainText())
+        if self.answer21.isChecked():
+            file.write(self.answer4.text()+"\n")
+        if self.answer22.isChecked():
+            file.write(self.answer5.text()+"\n")
+        if self.answer23.isChecked():
+            file.write(self.answer6.text()+"\n")
+        if self.answer20.isChecked():
+            file.write(self.answer7.text()+"\n")
+
+        file.write("\n"+self.textEdit_15.toPlainText())
+        file.write(self.calendarWidget.selectedDate().toString("yyyy-MM-dd")+" "+ self.timeEdit.time().toString()+"\n")
 
         file.close()
 
